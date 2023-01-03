@@ -38,7 +38,12 @@ export default class Sorting {
     }
   }
 
-  mergeSort() {}
+  mergeSort(array) {
+    for (let index = 0; index < array.length; index++) {
+      let [elementindex] = array[index];
+      console.log(elementindex)
+    }
+  }
 
   quickSort() {}
 

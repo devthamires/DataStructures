@@ -1,4 +1,4 @@
-import Sorting from "./sorting/sorting.js";
+import Sorting from "../src/sorting";
 
 const sorting = new Sorting();
 
