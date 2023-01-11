@@ -1,12 +1,20 @@
 {
-  "name": "sorting",
+  "name": "datastructures",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "type": "module",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devthamires/DataStructures.git"
+  },
   "author": "Thamires Garcia",
-  "license": "ISC"
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/devthamires/DataStructures/issues"
+  },
+  "homepage": "https://github.com/devthamires/DataStructures#readme"
 }
