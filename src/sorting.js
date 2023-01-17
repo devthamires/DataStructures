@@ -50,8 +50,8 @@ export class Sorting {
   }
 
   _merge(array, start, middle, end) {
-    let leftArray = array.slice(start, middle);
-    let rightArray = array.slice(middle, end);
+    const leftArray = array.slice(start, middle);
+    const rightArray = array.slice(middle, end);
     let topRight = 0;
     let topLeft = 0;
 
@@ -72,7 +72,32 @@ export class Sorting {
     }
   }
 
-  quickSort() {}
+  quickSort(array, start = 0, end = null) {
+    if (end === null) end = array.length - 1;
+    if (start < end) {
+      let pivotPosition = this._partition(array, start, end);
+      this.quickSort(array, start, pivotPosition - 1);
+      this.quickSort(array, pivotPosition + 1, end);
+    }
+  }
+
+  _partition(array, start, end) {
+    const pivot = array[end];
+    let count = start;
+
+    for (let index = start; index < end; index++) {
+      if (array[index] <= pivot) {
+        const temp = array[index];
+        array[index] = array[count];
+        array[count] = temp;
+        count++;
+      }
+    }
+    const temp = array[count];
+    array[count] = array[end];
+    array[end] = temp;
+    return count;
+  }
 
   randomQuickSort() {}
 
